@@ -1,0 +1,31 @@
+{
+  "name": "chatinterface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HienNguyen711/ChatInterface.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HienNguyen711/ChatInterface/issues"
+  },
+  "homepage": "https://github.com/HienNguyen711/ChatInterface#readme",
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "css-loader": "^0.26.1",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.5.0",
+    "react": "^15.4.2",
+    "react-hot-loader": "^1.3.1",
+    "sass-loader": "^6.0.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.1"
+  }
+}
