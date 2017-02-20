@@ -28,7 +28,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        include: path.join(__dirname, 'src'),
+        include: path.join(__dirname, 'src/styles'),
         loader: 'style!css!sass'
       }
     ]
