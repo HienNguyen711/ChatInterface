@@ -1,0 +1,16 @@
+{
+  "messages": {
+    "0": {
+        "message": "Hi there, how are you",
+        "date": "Wed, 08 Jul 2015 18:14:27 GMT",
+        "from": "Jane",
+        "profilePic": "http://www.gravatar.com/avatar/0bc83cb571cd1c50ba6f3e8a78ef1346?s=48&d=identicon"
+    },
+    "1": {
+        "message": "I am fine, and you?",
+        "date": "Wed, 08 Jul 2015 18:14:32 GMT",
+        "from": "Jimmy",
+        "profilePic": "http://www.gravatar.com/avatar/0bc83cb571cd1c50ba6f3e8a78ef1346?s=48&d=identicon"
+    }
+  }
+}

@@ -1,36 +1,30 @@
 import React from 'react';
-import mui from 'material-ui';
 import Message from './Message.jsx';
+import mui from 'material-ui';
+import Firebase from 'firebase';
+import _ from 'lodash';
 
-var {Card,List} = mui;
+var {Card, List} = mui;
 
 class MessageList extends React.Component {
- constructor(props){
+  constructor(props){
     super(props);
     this.state = {
       messages: [
-        'Hello',
-        'Hi'
+
       ]
     };
   }
 
+  render(){
+    var messageNodes = this.state.messages.map((message)=> {
+      return (
+        <Message message={message} />
+      );
+    });
 
-
-}
-
-
-render(){
-  var messageNodes = this.state.messages.map( (message) => {
     return (
-      <Message message={message}/>
-
-    );
-  });
-
-
-  return (
-   <Card style={{
+      <Card style={{
         flexGrow: 2,
         marginLeft: 30
       }}>
@@ -41,5 +35,5 @@ render(){
     );
   }
 }
-//export
+
 export default MessageList;
