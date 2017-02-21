@@ -1,5 +1,5 @@
 import React from 'react';
 import App from './components/App.jsx';
-require('./main.scss');
+require('./styles/styles.scss');
 
-React.render(<App />, document.getElementById('container'));
+React.render(<App />, document.getElementById('root'));
