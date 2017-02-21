@@ -8,16 +8,7 @@
 
 
 + File structure
--------------------- |
-| |----------------| |
-| | |Message.jsx | | |
-| | |------------| | |
-| | MessageList.jsx| |
-| |----------------| |
-|  App.jsx           |
-|--------------------|
-
-
+<img src="https://s8.postimg.org/suce63rzp/image.png"> 
 
 
 # Reference:
