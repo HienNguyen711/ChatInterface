@@ -26,29 +26,22 @@ class Actions {
 
 
 
-
-
-
-  //login
+  //log in
   login(args){
     return (dispatch) => {
-      var firebaseRef
-      firebaseRef.authWithOAuthPopup('google', (err,user) => {
-        if(err){
-
+      var firebaseRef = new Firebase('https://chatinterface-6c669.firebaseio.com/');
+      //with google popup
+      firebaseRef.authWithOAuthPopup("google", (error, user)=> {
+        if(error){
+          return;
         }
-        //else
+        //dispatch
         dispatch(user);
-      })
+      });
     }
   }
-
-
 }
+//export
+//module.export = alt.createActions(LocationActions);
+export default alt.createActions(Actions);
 
-
-
-
-
-
-export

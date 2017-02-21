@@ -22,6 +22,7 @@
  ++ Store:
   +++ emit event
  ++ View
++ Docs : http://alt.js.org/guide/
 
 
 # Reference:
