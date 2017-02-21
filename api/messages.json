@@ -1,16 +1,74 @@
 {
   "messages": {
-    "0": {
-        "message": "Hi there, how are you",
-        "date": "Wed, 08 Jul 2015 18:14:27 GMT",
+    "jane": {
+      "jane_first": {
+        "message": "Hello I am Jane",
+        "date": "Wed, 08 Feb 2017 18:14:27 GMT",
         "from": "Jane",
-        "profilePic": "http://www.gravatar.com/avatar/0bc83cb571cd1c50ba6f3e8a78ef1346?s=48&d=identicon"
-    },
-    "1": {
-        "message": "I am fine, and you?",
-        "date": "Wed, 08 Jul 2015 18:14:32 GMT",
+        "profilePic": "http://www.gravatar.com/avatar/a424e1b0ab3a8dee82c25ae0f0804107?s=48&d=identicon"
+      },
+      "jane_second": {
+        "message": "Hello I am Jimmy",
+        "date": "Wed, 08 Feb 2017 18:14:32 GMT",
         "from": "Jimmy",
-        "profilePic": "http://www.gravatar.com/avatar/0bc83cb571cd1c50ba6f3e8a78ef1346?s=48&d=identicon"
+        "profilePic": "http://www.gravatar.com/avatar/f544faf10969339692d6d0474050f8fe?s=48&d=identicon"
+      }
+    },
+    "jimmy": {
+      "jimmy_first": {
+        "message": "Hello I am Jimmy",
+        "date": "Wed, 08 Feb 2017 18:14:27 GMT",
+        "from": "Jimmy",
+        "profilePic": "http://www.gravatar.com/avatar/a424e1b0ab3a8dee82c25ae0f0804107?s=48&d=identicon"
+      },
+      "jimmy_second": {
+        "message": "Hello I am Jane",
+        "date": "Wed, 08 Feb 2017 18:14:32 GMT",
+        "from": "Jane",
+        "profilePic": "http://www.gravatar.com/avatar/f544faf10969339692d6d0474050f8fe?s=48&d=identicon"
+      }
+    },
+    "john": {
+      "john_first": {
+        "message": "Hello I am John",
+        "date": "Wed, 08 Feb 2017 18:14:27 GMT",
+        "from": "John",
+        "profilePic": "http://www.gravatar.com/avatar/a424e1b0ab3a8dee82c25ae0f0804107?s=48&d=identicon"
+      },
+      "john_second": {
+        "message": "Hello I am Jimmy",
+        "date": "Wed, 08 Feb 2017 18:14:32 GMT",
+        "from": "Jimmy",
+        "profilePic": "http://www.gravatar.com/avatar/f544faf10969339692d6d0474050f8fe?s=48&d=identicon"
+      }
+    },
+    "ana": {
+      "ana_first": {
+        "message": "Hello I am Ana",
+        "date": "Wed, 08 Feb 2017 18:14:27 GMT",
+        "from": "Ana",
+        "profilePic": "http://www.gravatar.com/avatar/a424e1b0ab3a8dee82c25ae0f0804107?s=48&d=identicon"
+      },
+      "ana_second": {
+        "message": "Hello I am Jane",
+        "date": "Wed, 08 Feb 2017 18:14:32 GMT",
+        "from": "Jane",
+        "profilePic": "http://www.gravatar.com/avatar/f544faf10969339692d6d0474050f8fe?s=48&d=identicon"
+      }
+    }
+  },
+  "channels": {
+    "Jane": {
+      "name": "jane"
+    },
+    "Jimmy": {
+      "name": "jimmy"
+    },
+    "John": {
+      "name": "john"
+    },
+    "Ana": {
+      "name": "ana"
     }
   }
 }

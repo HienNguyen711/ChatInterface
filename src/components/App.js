@@ -3,11 +3,14 @@ import MessageList from './MessageList.jsx';
 import ChannelList from './ChannelList.jsx';
 import MessageBox from './MessageBox.jsx';
 import mui from 'material-ui';
+import connectToStores from
+import ChatStore from
+
 
 var ThemeManager = new mui.Styles.ThemeManager();
 var Colors = mui.Styles.Colors;
 var AppBar = mui.AppBar;
-
+@connectToStores
 class App extends React.Component {
   constructor(){
     super();
@@ -19,6 +22,13 @@ class App extends React.Component {
       accent1Color: Colors.grey50
     });
   }
+  //static function when using connectToStores
+  //static getStores
+
+
+  //static getPropsFromStores
+
+
 
   static childContextTypes = {
     muiTheme: React.PropTypes.object

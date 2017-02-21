@@ -1,6 +1,6 @@
 import React from 'react';
-import Channel from './Channel.jsx';
 import mui from 'material-ui';
+import Channel from './Channel.jsx';
 
 var {Card, List} = mui;
 
@@ -33,5 +33,5 @@ class ChannelList extends React.Component {
     );
   }
 }
-
+//export
 export default ChannelList;

@@ -6,20 +6,37 @@ import _ from 'lodash';
 
 var {Card, List} = mui;
 
+//init firebase
+
+
 class MessageList extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      messages: [
-
-      ]
+      messages:{}
     };
+    
+    this.firebaseRef = new Firebase('https://chatinterface-6c669.firebaseio.com/messages');
+    this.firebaseRef.on('child_added', (message) => {
+      if(this.state.messages[message.key()]){
+        return;
+      }
+      
+      
+      let msgVal = message.val();
+      msgVal.key = message.key();
+      this.state.messages[msgVal.key] = msgVal;
+      this.setState({
+        messages: this.state.messages
+      });
+      
+    });
   }
 
   render(){
-    var messageNodes = this.state.messages.map((message)=> {
+    var messageNodes = _.values(this.state.messages).map((message)=> {
       return (
-        <Message message={message} />
+        <Message message={message.message} />
       );
     });
 
