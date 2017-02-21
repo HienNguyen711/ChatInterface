@@ -3,13 +3,17 @@ import MessageList from './MessageList.jsx';
 import ChannelList from './ChannelList.jsx';
 import MessageBox from './MessageBox.jsx';
 import mui from 'material-ui';
-import connectToStores from
-import ChatStore from
+//alt
+import connectToStores from 'alt/utils/connectToStores';
+import ChatStore from '../stores/ChatStore';
+import Login from './Login.jsx';
 
 
 var ThemeManager = new mui.Styles.ThemeManager();
 var Colors = mui.Styles.Colors;
 var AppBar = mui.AppBar;
+
+
 @connectToStores
 class App extends React.Component {
   constructor(){
@@ -27,6 +31,13 @@ class App extends React.Component {
 
 
   //static getPropsFromStores
+  static getStores(){
+    return [ChatStore];
+  }
+
+  static getPropsFromStores(){
+    return ChatStore.getState();
+  }
 
 
 
@@ -41,20 +52,30 @@ class App extends React.Component {
   }
 
   render(){
+    var view = <Login />;
+    //if user login
+    if(this.props.user){
+      view = (
+        <div>
+          <div style={{
+            display: 'flex',
+            flexFlow: 'row wrap',
+            maxWidth: 1200,
+            width: '100%',
+            margin: '30px auto 30px'
+          }}>
+            <ChannelList />
+            <MessageList />
+          </div>
+          <MessageBox />
+        </div>
+      );
+    }
+
     return (
       <div>
         <AppBar title="Chat Interface" />
-        <div style={{
-          display: 'flex',
-          flexFlow: 'row wrap',
-          maxWidth: 1200,
-          width: '100%',
-          margin: '30px auto 30px'
-        }}>
-          <ChannelList />
-          <MessageList />
-        </div>
-        <MessageBox />
+        {{view}}
       </div>
     );
   }
