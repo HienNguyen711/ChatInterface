@@ -3,42 +3,49 @@ import Message from './Message.jsx';
 import mui from 'material-ui';
 import Firebase from 'firebase';
 import _ from 'lodash';
+//alt
+import connectToStores from 'alt/utils/connectToStores';
+import ChatStore from '../stores/ChatStore';
 
-var {Card, List} = mui;
+var {Card, List, CircularProgress} = mui;
 
 //init firebase
 
-
+@connectToStores
 class MessageList extends React.Component {
   constructor(props){
     super(props);
-    this.state = {
-      messages:{}
-    };
-    
-    this.firebaseRef = new Firebase('https://chatinterface-6c669.firebaseio.com/messages');
-    this.firebaseRef.on('child_added', (message) => {
-      if(this.state.messages[message.key()]){
-        return;
-      }
-      
-      
-      let msgVal = message.val();
-      msgVal.key = message.key();
-      this.state.messages[msgVal.key] = msgVal;
-      this.setState({
-        messages: this.state.messages
-      });
-      
-    });
+
+  }
+
+  //static
+  static getStores(){
+    return [ChatStore];
+  }
+  static getPropsFromStores(){
+    return ChatStore.getState();
   }
 
   render(){
-    var messageNodes = _.values(this.state.messages).map((message)=> {
+    let messageNodes = null;
+    if(!this.props.messagesLoading){
+      messageNodes = _.values(this.state.messages).map((message)=> {
       return (
-        <Message message={message.message} />
+        <Message message={message} />
       );
     });
+    else {
+       messageNodes = <CircularProgress mode="indeterminate"
+        style={{
+          paddingTop: 20,
+          paddingBottom: 20,
+          margin: '0 auto',
+          display: 'block',
+          width: '60px'
+        }} />;
+
+    }
+
 
     return (
       <Card style={{

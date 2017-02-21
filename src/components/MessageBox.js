@@ -2,6 +2,8 @@ import React from 'react';
 import mui from 'material-ui';
 import trim from 'trim';
 import Firebase from 'firebase';
+//alt
+import Actions from '../actions';
 //import Card from material-design
 var {Card} = mui;
 
@@ -24,10 +26,8 @@ class MessageBox extends React.Component {
   onKeyUp(e){
     if(e.keyCode === 13 && trim(e.target.value) != ''){
       e.preventDefault();
-      //add to firebase
-      this.firebaseRef.push({
-        message: this.state.message
-      });
+      //register with action about sendMessage event
+      Actions.sendMessage(this.state.message);
 
       this.setState({
         message: ''
